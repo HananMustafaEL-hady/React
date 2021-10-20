@@ -2,7 +2,7 @@ import React from "react";
 
 function Card({ name, imgsrc, city, country }) {
   return (
-    <div class="card">
+    <div className="card">
       <img src={imgsrc} alt="" />
       <div>
         <h2>{name}</h2>

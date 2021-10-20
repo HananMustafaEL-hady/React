@@ -1,12 +1,11 @@
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: auto;
   text-align: center;
   font-family: arial;
   display: flex;
   width: 100%;
-  grid-column-gap: 10px;
   position: relative;
+  column-gap: 24px;
 }
 
 .title {
@@ -54,4 +53,43 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
+}
+
+/* For tablets: */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .display-grid {
+    grid-gap: none;
+  }
+  .card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 70%;
+    border-radius: 50%;
+  }
+  button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* .card {
+    column-gap: 24px;
+  } */
+  .display-grid {
+    grid-gap: none;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  button {
+    width: 35px;
+    height: 35px;
+    top: 60px;
+    right: 1px;
+  }
+  h2 {
+    font-size: 1rem;
+  }
 }
